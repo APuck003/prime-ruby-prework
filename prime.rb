@@ -1,14 +1,14 @@
 def prime?(num)
-  if num <= 1
-    return false
-  elsif n <= 3
-    return true
-  elsif (2..num/2).none? do |x|
-    num % x == 0
-    return false
-  else
-    return true
+  if num <= 2
+    false
   end
-
-end
+  if num > 2
+    num_range = (2..num - 1).to_a
+    num_range.each do |x|
+      if num % x == 0
+        false
+      end
+    end
+  end
+  true
 end
